@@ -46,7 +46,8 @@ The application allows users to filter data in real-time based on their selected
 
 
 
-> Program's Look While Fetching Data 
+
+> Program's Look While Fetching Data
 ![filters](images/ss3.png) 
 
 
