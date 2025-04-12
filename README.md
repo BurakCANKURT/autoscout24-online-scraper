@@ -38,8 +38,7 @@ The application allows users to filter data in real-time based on their selected
 
 
 
-> Sidebad With Filtration
-![filters](images/ss2.png) 
+> Sidebad With Filtration ![filters](images/ss2.png) 
 
 
 
