@@ -34,7 +34,7 @@ The application allows users to filter data in real-time based on their selected
 > Main Without Filtration
 ![filters](images/ss1.png) 
 
-Sidebad With Filtration
+> Sidebad With Filtration
 ![filters](images/ss2.png) 
 
 > Program's Look While Fetching Data
