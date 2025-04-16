@@ -89,6 +89,16 @@ cd your-repository
 ├── README.md               # Project documentation
 └── images/                 # Screenshots & visual assets
 
+## ⚠️ Note on Duplicate Entries
+
+In some cases, **duplicate car entries** may appear in the dataset.  
+This is due to a limitation in the data loading mechanism on the website, which restricts the amount of data fetched per request.
+
+To overcome this and ensure a more complete extraction, additional non-user-based filters were applied during scraping.  
+As a result, some **repeated data** may have been captured unintentionally.
+
+This trade-off was intentional to maximize data coverage, especially for listings that are not visible under standard filtering.  
+Post-processing to eliminate duplicates based on unique fields (e.g., listing ID or title) is recommended when analyzing the final dataset.
 
 
 Enjoy your data scraping!
