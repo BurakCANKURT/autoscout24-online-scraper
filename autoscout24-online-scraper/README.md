@@ -52,6 +52,7 @@ The application allows users to filter data in real-time based on their selected
 
 ### 1. Clone the repository
 > git clone https://github.com/BurakCANKURT/autoscout24-online-scraper.git
+
 > cd autoscout24-online-scraper/autoscout24-online-scraper
 
 ### 2. Install dependencies
