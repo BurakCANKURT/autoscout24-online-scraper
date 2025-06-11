@@ -1,35 +1,50 @@
-# 🚗 AutoScout24 Dynamic Data Scraper
+# 🚗 AutoScout24 Smart Car Price Estimator & Dynamic Scraper
 
-A dynamic and user-friendly web scraping tool built with **Python**, **Streamlit**, and **Selenium**, designed to extract car listings from [AutoScout24](https://www.autoscout24.com).  
-The application allows users to filter data in real-time based on their selected criteria and download the results as a CSV file.
+A professional-grade, dual-purpose application that combines:
 
-> 📌 **Goal:** Efficiently collect structured car listing data for analysis, research, or business intelligence purposes.
+- 📊 **Dynamic scraping** from AutoScout24 for real-time car listing extraction
+- 🧠 **Machine learning-based price prediction** using structured model-based training
+
+Built with Python, Selenium, Streamlit, and XGBoost.
+
+---
+
+## 🎯 Project Goals
+
+- Efficiently **scrape structured vehicle listing data** from AutoScout24
+- Enable **real-time user prediction** of car prices based on mileage, fuel type, gearbox, and power
+- Serve as a scalable **assistant module** for second-hand car marketplaces or analytics platforms
 
 ---
 
 ## ✨ Features
 
-- ✅ **Dynamic Filtering**  
-  Select brand, model, fuel type, gearbox, mileage range, and power specifications dynamically.
-  
-- ✅ **Real-Time Data Extraction**  
-  Data is scraped instantly based on selected filters, no need to refresh manually.
+### 🔍 Intelligent Web Scraping
+- Filter by brand, model, fuel type, gearbox, mileage, and power
+- Dynamically scrape matching listings from AutoScout24
+- View listings in card-based format with export to CSV
 
-- ✅ **Data Validation**  
-  Ensures correct input values for mileage and power fields (numeric control and logical consistency).
+### 💡 Smart Price Estimation
+- Predict car prices using a model trained on the scraped dataset
+- Brand-model specific training logic for more localized estimations
+- Displays result in a modern Streamlit interface with metric widgets
 
-- ✅ **Card-Based UI Display**  
-  Clean and interactive design displaying scraped data as individual cards.
-
-- ✅ **Export Functionality**  
-  Download the filtered dataset as a CSV file for further analysis.
-
-- ✅ **Performance Optimization**  
-  Improved browser driver management to minimize resource consumption.
+### 🧪 Data Cleaning & Model Logic
+- Cleans numeric data (price, power, mileage)
+- Filters listings outside the defined valid ranges
+- Uses OneHotEncoding and XGBoostRegressor inside an sklearn pipeline
 
 ---
 
-## 🖼️ Screenshots
+## 🖥️ Interface Overview
+
+
+# 🎯 **Ask to The Model** 
+> Prediction Workflow
+![Prediction Flow](images/predictor.gif)
+
+
+# 🔍 **Search Car Data**
 
 > Main Without Filtration
 ![filters](images/ss1.png) 
@@ -46,60 +61,62 @@ The application allows users to filter data in real-time based on their selected
 > After Fetching The Data Download it
  ![filters](images/ss5.png) 
 
----
+--- |
 
-## ⚙️ Installation & Usage
+
+## 🚀 Installation
 
 ### 1. Clone the repository
-> git clone https://github.com/BurakCANKURT/autoscout24-online-scraper.git
-
->  cd autoscout24-online-scraper/autoscout24-online-scraper
+```bash
+> git clone https://github.com/your-username/autoscout24-smart-estimator.git
+> cd autoscout24-smart-estimator
 
 ### 2. Install dependencies
 > pip install -r requirements.txt
 
-### 3. Run the application
+### 3. Run the app
 > streamlit run Main.py
 
-### 4. Use the app
-- Set your filters on the sidebar.
-- Click Start Scraping to begin data extraction.
-- Review the data displayed as cards.
-- Download the data as a CSV file.
 
-```bash
-git clone https://github.com/your-username/your-repository.git
-cd your-repository
-
-
-🚀 Tech Stack
-├── Python 3.8+
-├── Streamlit
-├── Selenium WebDriver
-├── WebDriver Manager 
-├── Pandas
-└── psutil
-    
-
-    
-🗂️ Project Structure
-├── Main.py                 # Main application file
-├── OnlineAutoscout24.py    # Web scraper class
-├── ScrapElements.py        # Required scraping elements file
-├── requirements.txt        # Dependencies list
-├── README.md               # Project documentation
-└── images/                 # Screenshots & visual assets
-
-## ⚠️ Note on Duplicate Entries
-
-In some cases, **duplicate car entries** may appear in the dataset.  
-This is due to a limitation in the data loading mechanism on the website, which restricts the amount of data fetched per request.
-
-To overcome this and ensure a more complete extraction, additional non-user-based filters were applied during scraping.  
-As a result, some **repeated data** may have been captured unintentionally.
-
-This trade-off was intentional to maximize data coverage, especially for listings that are not visible under standard filtering.  
-Post-processing to eliminate duplicates based on unique fields (e.g., listing ID or title) is recommended when analyzing the final dataset.
+📂 Project Structure
+├── Main.py                      # Streamlit interface, ML model logic
+├── OnlineData.py                # Web scraping logic for live data
+├── OnlineAutoscout24.py         # Detailed scraping handler
+├── ScrapElements.py             # UI element definitions (brands, filters)
+├── KFoldTargetEncoderWrapper.py# (Optional) advanced encoding module
+├── autoscout24.csv              # Cleaned and preprocessed base dataset
+├── requirements.txt             # Project dependencies
+├── README.md                    # Project documentation
+└── images/                      # Visual assets (screenshots)
 
 
-Enjoy your data scraping!
+⚠️ Notes on Model Design
+Models are trained on-the-fly using filtered data (per brand or brand-model)
+
+If sufficient brand-model data is not available, the model falls back to brand-only data
+
+Prediction model uses OneHotEncoding and an XGBoost regressor (no external ML API required)
+
+
+📦 Output
+Feature	    Format
+Prediction	💶 Estimated Euro price
+Export	    📄 CSV File (filtered listings)
+Deployment	🖥️ Streamlit UI
+
+
+
+🧠 Tech Stack
+├──Python 3.8+
+├──Streamlit
+├──Selenium
+├──Pandas
+├──XGBoost
+├──Scikit-learn
+└──Category Encoders
+
+
+
+🤝 Contributions
+Pull requests are welcome. For major changes, please open an issue first to discuss.
+
