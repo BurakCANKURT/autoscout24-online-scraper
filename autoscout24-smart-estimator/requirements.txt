@@ -1,0 +1,8 @@
+streamlit
+pandas
+selenium
+xgboost
+scikit-learn
+numpy
+webdriver-manager
+category-encoders
