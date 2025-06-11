@@ -78,6 +78,22 @@ Built with Python, Selenium, Streamlit, and XGBoost.
 > streamlit run Main.py
 
 
+### 📦 Dataset
+Due to GitHub’s file size limitation, the full dataset is included as a compressed .rar file:
+
+autoscout24.rar
+
+### 🔓 How to Use
+Extract the file using any archive tool (e.g., WinRAR, 7-Zip, macOS Archive Utility).
+
+Place the extracted autoscout24.csv file in the root directory of the project.
+
+Then you can run the app as usual:
+
+> streamlit run Main.py
+
+
+
 📂 Project Structure
 ├── Main.py                      # Streamlit interface, ML model logic
 ├── OnlineData.py                # Web scraping logic for live data
