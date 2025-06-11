@@ -100,7 +100,7 @@ Then you can run the app as usual:
 ├── OnlineAutoscout24.py         # Detailed scraping handler
 ├── ScrapElements.py             # UI element definitions (brands, filters)
 ├── KFoldTargetEncoderWrapper.py# (Optional) advanced encoding module
-├── autoscout24.csv              # Cleaned and preprocessed base dataset
+├── autoscout24.rar              # Cleaned and preprocessed base dataset / It should be here after extracting the .rar
 ├── requirements.txt             # Project dependencies
 ├── README.md                    # Project documentation
 └── images/                      # Visual assets (screenshots)
