@@ -68,7 +68,7 @@ Built with Python, Selenium, Streamlit, and XGBoost.
 
 ### 1. Clone the repository
 ```bash
-> git clone https://github.com/your-username/autoscout24-smart-estimator.git
+> git clone https://github.com/BurakCANKURT/autoscout24-smart-estimator.git
 > cd autoscout24-smart-estimator
 
 ### 2. Install dependencies
