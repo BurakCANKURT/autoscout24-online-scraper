@@ -74,9 +74,6 @@ Built with Python, Selenium, Streamlit, and XGBoost.
 ### 2. Install dependencies
 > pip install -r requirements.txt
 
-### 3. Run the app
-> streamlit run Main.py
-
 
 ### 📦 Dataset
 Due to GitHub’s file size limitation, the full dataset is included as a compressed .rar file:
